@@ -1,0 +1,6 @@
+nvcc facetrain.c -c -o facetrain.o
+nvcc imagenet.c -c -o imagenet.o
+nvcc backprop.c -c -o backprop.o
+nvcc backprop.cu *.o -Xcompiler  -lcudart -lnvToolsExt -lm -o backprop
+
+rm *.o
